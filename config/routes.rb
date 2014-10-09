@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
    
+  resources :users
+
   resources :sessions 
 
   get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'login', to: 'sessions#new', as: 'login'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
