@@ -1,8 +1,8 @@
 <h1>Welcome</h1>
 
 <p>
-<% if @current_user %>
-  Welcome <%= @current_user.email %>
+<% if current_user %>
+  Welcome <%= current_user.email %>
   Log out <%= link_to "here", logout_path %>
 <% else %>
   Log in <%= link_to "here", login_path %>
